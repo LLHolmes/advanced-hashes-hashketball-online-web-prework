@@ -200,20 +200,15 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
-  shoe_array = []
+  shoe_list = {}
   game_hash.each do |location, team_data|
     team_data.each do |team_attribute, data|
       if team_attribute == :players
         data.each do |team_member, stats|
-          if team_member == player
-            stats.each do |list, value|
-              if list == :shoe
-                return value
-              end
-            end
-          end
+          shoe_list[team_member] = team_member[:shoe]
         end
       end
     end 
   end
+  largest_shoe = shoe_list.sort_by{|k,v| v}[-1]
 end
