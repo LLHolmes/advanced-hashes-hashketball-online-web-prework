@@ -201,12 +201,10 @@ end
 
 def big_shoe_rebounds
   shoe_list = {}
-#  temp_player = ""
   game_hash.each do |location, team_data|
     team_data.each do |team_attribute, data|
       if team_attribute == :players
         data.each do |team_member, stats|
-#          temp_player = team_member
           puts team_member
           stats.each do |list, value|
             if list == :shoe
@@ -218,7 +216,6 @@ def big_shoe_rebounds
       end
     end 
   end
-  puts shoe_list
   shoe_list
 end
 #  largest_shoe = shoe_list.sort_by{|k,v| v}[-1]
