@@ -210,5 +210,7 @@ def big_shoe_rebounds
       end
     end 
   end
+  shoe_list
+end
   largest_shoe = shoe_list.sort_by{|k,v| v}[-1]
 end
