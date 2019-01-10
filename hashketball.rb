@@ -189,8 +189,9 @@ def player_stats(player)
   game_hash.each do |location, team_data|
     team_data.each do |team_attribute, data|
       data.each do |team_member, stats|
-        if team_attribute[:players].include?(player) == true
-        return team_attribute[:players][player]
+        if team_member == true
+          return stats
+        end
       end
     end 
   end
