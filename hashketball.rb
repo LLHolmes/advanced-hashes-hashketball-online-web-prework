@@ -189,7 +189,7 @@ def player_stats(player)
   game_hash.each do |location, team_data|
     team_data.each do |team_attribute, data|
       data.each do |team_member, stats|
-        if team_member == true
+        if team_member == player
           return stats
         end
       end
