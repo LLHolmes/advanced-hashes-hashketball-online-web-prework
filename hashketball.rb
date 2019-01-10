@@ -209,9 +209,11 @@ def big_shoe_rebounds
 #          temp_player = team_member
           puts team_member
           stats.each do |list, value|
-              if list == :shoe
-                puts value
-                shoe_list[team_member] = value
+            if list == :shoe
+              puts value
+              shoe_list[team_member] = value
+            end
+          end
         end
       end
     end 
