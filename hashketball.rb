@@ -205,12 +205,14 @@ def big_shoe_rebounds
     team_data.each do |team_attribute, data|
       if team_attribute == :players
         data.each do |team_member, stats|
+          puts "#{team_member}: shoe size: #{team_member[:shoe]}"
           shoe_list[team_member] = team_member[:shoe]
         end
       end
     end 
   end
+  puts shoe_list
   shoe_list
 end
-  largest_shoe = shoe_list.sort_by{|k,v| v}[-1]
-end
+#  largest_shoe = shoe_list.sort_by{|k,v| v}[-1]
+#end
