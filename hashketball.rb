@@ -201,6 +201,7 @@ end
 
 def big_shoe_rebounds
   shoe_list = {}
+  temp_player = ""
   game_hash.each do |location, team_data|
     team_data.each do |team_attribute, data|
       if team_attribute == :players
