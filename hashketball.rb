@@ -184,3 +184,11 @@ def player_numbers(team)
   end
   jersey_numbers
 end
+
+def player_stats(player)
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, data|
+      team_attribute[:players].include?(player)
+    end 
+  end
+end
